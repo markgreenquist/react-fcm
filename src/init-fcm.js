@@ -1,14 +1,14 @@
-import * as firebase from "firebase/app";
-import "firebase/messaging";
+import * as firebase from 'firebase/app';
+import 'firebase/messaging';
 
 const initializedFirebaseApp = firebase.initializeApp({
-  messagingSenderId: "1062881024656"
+  messagingSenderId: '231775446200'
 });
 
 const messaging = initializedFirebaseApp.messaging();
 
 messaging.usePublicVapidKey(
-  "BD6n7ebJq...rP-ytiqlsj4AcNNeQcbes"
+  'BFRA2LibasWbW4ahGNnon2KwnH0mEg_FGrktVGtcyQtkSrmchlb_t4oReYhGd8s874me0rXqtXAyyBjYlVhWWEA'
 );
 
 export { messaging };

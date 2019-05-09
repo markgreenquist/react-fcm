@@ -1,8 +1,8 @@
-importScripts("https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js");
-importScripts("https://www.gstatic.com/firebasejs/5.9.4/firebase-messaging.js");
+importScripts('https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/5.9.4/firebase-messaging.js');
 
 firebase.initializeApp({
-  messagingSenderId: "1062407524656"
+  messagingSenderId: '231775446200'
 });
 
 const messaging = firebase.messaging();
@@ -10,7 +10,7 @@ const messaging = firebase.messaging();
 messaging.setBackgroundMessageHandler(function(payload) {
   const promiseChain = clients
     .matchAll({
-      type: "window",
+      type: 'window',
       includeUncontrolled: true
     })
     .then(windowClients => {
@@ -20,7 +20,7 @@ messaging.setBackgroundMessageHandler(function(payload) {
       }
     })
     .then(() => {
-      return registration.showNotification("my notification title");
+      return registration.showNotification('my notification title');
     });
   return promiseChain;
 });
